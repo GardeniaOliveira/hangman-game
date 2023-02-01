@@ -1,3 +1,6 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
   }
 .container{
     text-align: center;
@@ -15,4 +19,21 @@
 }
   h1,p{
    padding-bottom: 20px;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .wrong-letters-msg{
+    font-size: 16px;
+    color: rgb(231, 23, 23);
+    letter-spacing: 5px;
+  }
+  .right-letters-msg{
+    font-size: 20px;
+    color: rgb(33, 124, 33);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: bolder;
   }
