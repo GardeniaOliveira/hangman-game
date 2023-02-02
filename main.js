@@ -2,6 +2,7 @@ const repeatMsg = document.querySelector('.repeat-msg');
 const wrongLettersMsg = document.querySelector('.wrong-letters-msg');
 const rightLettersMsg = document.querySelector('.right-letters-msg');
 const titleWrongLetters = document.querySelector('.title');
+const img = document.querySelector('.img');
 
 const technologies = [
     "php", "javascript", "node", "phyton", "java"
@@ -29,11 +30,14 @@ document.addEventListener("keydown", (event) => {
     }
 })
 function updateGame() {
-    showWrongLetter()
-    showRightLetter()
+    showWrongLetter();
+    showRightLetter();
+    changeImages();
+
 }
+
 function showWrongLetter() {
-   
+
     wrongLettersMsg.innerHTML = "";
     wrongLetters.forEach(letter => {
         titleWrongLetters.innerHTML = `Wrong Letters`
@@ -51,6 +55,37 @@ function showRightLetter() {
         }
 
     })
+}
+function changeImages() {
+    debugger;
+    for (let i = 0; i <= wrongLetters.length; i++) {
+
+        switch (i) {
+            case 5:
+                img.src = 'img/img6.png';
+                
+                break;
+            case 4:
+                img.src = 'img/img5.png';
+                break;
+            case 3:
+                img.src = 'img/img4.png';
+                break;
+            case 2:
+                img.src = 'img/img3.png';
+                break;
+            case 1:
+                img.src = 'img/img2.png';
+                break;
+            case 0:
+                img.src = 'img/img1.png';
+                break;
+            default:
+                img.src = 'img/img.png';
+                break;
+        }
+
+    }
 }
 function isLetter(code) {
     return code >= 65 && code <= 90;
