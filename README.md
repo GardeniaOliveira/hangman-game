@@ -6,3 +6,4 @@ HTML;
 CSS;
 
 javaScript;
+Live project: https://hangman-game-chi-beige.vercel.app/
